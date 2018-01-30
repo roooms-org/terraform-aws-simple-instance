@@ -7,6 +7,10 @@ variable "instance_type" {
   default     = "t2.nano"
 }
 
-variable "vpc_id" {
-  description = "VPC ID to deploy within"
+variable "subnet_id" {
+  description = "Subnet ID to deploy within"
+}
+
+variable "security_group_id" {
+  description = "Security group ID to use"
 }
