@@ -16,7 +16,7 @@ data "template_file" "user_data" {
   template = "${file("${path.module}/user-data.tpl")}"
 
   vars {
-    pet_name = "${var.config_name}"
+    pet_name = "${var.namespace}"
   }
 }
 
@@ -32,7 +32,7 @@ resource "aws_instance" "main" {
   ]
 
   tags {
-    Name        = "${var.config_name}_aws_instance"
-    Config_Name = "${var.config_name}"
+    Name      = "${var.namespace}_aws_instance"
+    Namespace = "${var.namespace}"
   }
 }
