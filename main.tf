@@ -16,7 +16,7 @@ data "template_file" "user_data" {
   template = "${file("${path.module}/user-data.tpl")}"
 
   vars {
-    pet_name = "${var.namespace}"
+    name = "${var.namespace}"
   }
 }
 

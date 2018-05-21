@@ -6,5 +6,5 @@ yum update -y
 yum install -y httpd
 service httpd start
 chkconfig httpd on
-echo "<html><body><h1>${pet_name}</h1><h2>$${instance_id}</h2></body></html>" \
+echo "<html><body><h1>${name}</h1><h2>$${instance_id}</h2></body></html>" \
      > /var/www/html/index.html
