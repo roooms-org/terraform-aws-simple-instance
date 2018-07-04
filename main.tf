@@ -34,5 +34,6 @@ resource "aws_instance" "main" {
   tags {
     Name      = "${var.namespace}_aws_instance"
     Namespace = "${var.namespace}"
+    NewTag    = "testing-module-versioning"
   }
 }
